@@ -9,20 +9,20 @@ fs.readFile(inputPath,'utf-8', (err,signal) =>{
     } else {
         const markerLength = 14
         let indexCounter = markerLength;
-        const currentFourSigns = {};
+        const currentSigns = {};
 
         for(let i = 0; i < indexCounter; i++) {
-            currentFourSigns.hasOwnProperty(signal[i]) ? currentFourSigns[signal[i]] += 1 : currentFourSigns[signal[i]] = 1;
+            currentSigns.hasOwnProperty(signal[i]) ? currentSigns[signal[i]] += 1 : currentSigns[signal[i]] = 1;
         }
 
         while(indexCounter < signal.length) {
-            if(Object.values(currentFourSigns).every(value => value <= 1)) {
+            if(Object.values(currentSigns).every(value => value <= 1)) {
                 console.log(indexCounter);
                 break;
             }
 
-            currentFourSigns[signal[indexCounter-markerLength]] -= 1
-            currentFourSigns.hasOwnProperty(signal[indexCounter]) ? currentFourSigns[signal[indexCounter]] += 1 : currentFourSigns[signal[indexCounter]] = 1;
+            currentSigns[signal[indexCounter-markerLength]] -= 1
+            currentSigns.hasOwnProperty(signal[indexCounter]) ? currentSigns[signal[indexCounter]] += 1 : currentSigns[signal[indexCounter]] = 1;
             
             indexCounter++;
         }
