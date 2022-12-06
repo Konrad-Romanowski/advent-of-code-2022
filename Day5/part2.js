@@ -13,11 +13,12 @@ function translateRearangementsToObject(instruction) {
 }
 
 function rearrangeContainers(instructions,containers) {
+
     instructions.forEach(instruction => {
-        for(let i = 1; i <= instruction.numberOfContainers; i++){
-            const container = containers[instruction.from-1].shift();
-            containers[instruction.to-1].unshift(container);
-        }
+        const ungrabbedContainers = containers[instruction.from-1].splice(instruction.numberOfContainers);
+        const grabbedContainers = containers[instruction.from-1];
+        containers[instruction.from-1] = ungrabbedContainers;
+        containers[instruction.to-1] = [...grabbedContainers,...containers[instruction.to-1]];
     });
 
 }
