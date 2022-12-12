@@ -19,7 +19,7 @@ monkeys[0] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 5 === 0 ?
+            newWorryLevel % 5 === 0 ?
                 this.passItemToMonkey(6, newWorryLevel) :
                 this.passItemToMonkey(1, newWorryLevel);
         }
@@ -42,7 +42,7 @@ monkeys[1] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 2 === 0 ?
+            newWorryLevel % 2 === 0 ?
                 this.passItemToMonkey(2, newWorryLevel) :
                 this.passItemToMonkey(6, newWorryLevel);
         }
@@ -65,7 +65,7 @@ monkeys[2] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 19 === 0 ?
+            newWorryLevel % 19 === 0 ?
                 this.passItemToMonkey(7, newWorryLevel) :
                 this.passItemToMonkey(5, newWorryLevel);
         }
@@ -88,7 +88,7 @@ monkeys[3] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 7 === 0 ?
+            newWorryLevel % 7 === 0 ?
                 this.passItemToMonkey(0, newWorryLevel) :
                 this.passItemToMonkey(4, newWorryLevel);
         }
@@ -111,7 +111,7 @@ monkeys[4] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 17 === 0 ?
+            newWorryLevel % 17 === 0 ?
                 this.passItemToMonkey(0, newWorryLevel) :
                 this.passItemToMonkey(1, newWorryLevel);
         }
@@ -134,7 +134,7 @@ monkeys[5] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 13 === 0 ?
+            newWorryLevel % 13 === 0 ?
                 this.passItemToMonkey(4, newWorryLevel) :
                 this.passItemToMonkey(3, newWorryLevel);
         }
@@ -157,7 +157,7 @@ monkeys[6] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 3 === 0 ?
+            newWorryLevel % 3 === 0 ?
                 this.passItemToMonkey(2, newWorryLevel) :
                 this.passItemToMonkey(7, newWorryLevel);
         }
@@ -180,7 +180,7 @@ monkeys[7] = {
     
             const newWorryLevel = Math.floor(this.calculateWorryLevel(inspectedItem)/3);
     
-            Math.floor(newWorryLevel) % 11 === 0 ?
+            newWorryLevel % 11 === 0 ?
                 this.passItemToMonkey(3, newWorryLevel) :
                 this.passItemToMonkey(5, newWorryLevel);
         }
