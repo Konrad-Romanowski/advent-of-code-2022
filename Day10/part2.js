@@ -5,8 +5,6 @@ const inputPath = path.join(__dirname,'input.txt');
 
 const data = fs.readFileSync(inputPath, 'utf-8');
 
-console.log(data);
-
 const rawInstructions = data.split('\r\n');
 
 const instructions = rawInstructions.map(instruction => {
@@ -56,6 +54,6 @@ instructions.forEach(instruction => {
 fs.writeFileSync('result.txt','');
 
 display.forEach(row => {
-    const line = row.join('').concat('\n');
+    const line = row.join('').concat('\r\n');
     fs.appendFileSync('result.txt',line)
 });
